@@ -1,2 +1,2 @@
-# template
-Girl Code class project
+# nodestart
+A simple example Node.js project
