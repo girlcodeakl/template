@@ -11,24 +11,27 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-//make an empty list of ideas
+//make an empty list
 var posts = [];
-posts.push("Two cats who solve crimes in Dunedin");
+//Add an example post
+posts.push("A family who are all secretly superheroes but haven't told each other");
 
-//let a client GET the list of ideas
-var sendIdeasList = function (request, response) {
+//let a client GET the list
+var sendPostsList = function (request, response) {
   response.send(posts);
 }
-app.get('/ideas', sendIdeasList);
+app.get('/posts', sendPostsList);
 
-//let a client POST new ideas
-var saveNewIdea = function (request, response) {
-  console.log(request.body.idea); //write it on the command prompt so we can see
-  posts.push(request.body.idea); //save it in our list
-  response.send("thanks for your idea. Press back to add another");
+//let a client POST something new
+var saveNewPost = function (request, response) {
+  console.log(request.body.message); //write it on the command prompt so we can see
+  posts.push(request.body.message); //save it in our list
+  response.send("thanks for your message. Press back to add another");
 }
-app.post('/ideas', saveNewIdea);
+app.post('/posts', saveNewPost);
 
 //listen for connections on port 3000
 app.listen(3000);
-console.log("I am listening... open a web browser and go to localhost:3000 to connect.");
+console.log("Hi! I am listening at http://localhost:3000");
+
+      

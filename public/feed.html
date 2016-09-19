@@ -3,28 +3,26 @@
   <head>
     <meta charset='utf-8'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <title>Idea Feed</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Message Feed</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1 class="title">Idea Feed</h1>
-    <div class="idea-box">
+    <h1 class="title">Message Feed</h1>
+    <div class="message-list">
     </div>
     <script>
 //Hello! This is the start of the JavaScript.
 
-var displayIdea = function(idea) {
-  var ideaElement = $('<h2>' + idea + '</h2>');
-  $(".idea-box").append(ideaElement);
-
+var displayMessage = function(post) {
+  var postElement = $('<div class="message">' + post + '</div>');
+  $(".message-list").append(postElement);
 }
 
 var createFeed = function(data) {
-  data.forEach(displayIdea);
+  data.forEach(displayMessage);
 }
 
-$.get("/ideas", createFeed);
-
+$.get("/posts", createFeed);
 
 //This is the end of the JavaScript.
     </script>
