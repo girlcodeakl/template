@@ -1,16 +1,11 @@
 body {
   color: purple;
   background-color: orange;
-  text-align: center;
 }
 
 .message-list {
   background-color: #FFF0A5;
   padding: 20px;
-}
-
-h1 {
-  color: #FFB03B;
 }
 
 .message {
