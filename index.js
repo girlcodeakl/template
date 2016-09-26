@@ -13,8 +13,6 @@ app.use(bodyParser.json())
 
 //make an empty list
 var posts = [];
-//Add an example post
-posts.push("A family who are all secretly superheroes but haven't told each other");
 
 //let a client GET the list
 var sendPostsList = function (request, response) {
