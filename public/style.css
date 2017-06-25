@@ -11,10 +11,10 @@ h1 {
   color: #FFB03B;
 }
 
-.message {
-  color: #468966;
+.post {
   margin: 10px;
   padding: 10px;
   border: 2px solid #FFB03B;
   border-radius: 5px;
+  color: #468966;
 }
