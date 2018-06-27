@@ -13,15 +13,15 @@
     <script>
 //Hello! This is the start of the JavaScript.
 
-var displayMessage = function(post) {
-  var postElement = $('<div class="post"></div>');
+function displayMessage(post) {
+  let postElement = $('<div class="post"></div>');
   $(".message-list").append(postElement);
 
-  var messageElement = $('<div class="message">' + post + '</div>');
+  let messageElement = $('<div class="message">' + post + '</div>');
   postElement.append(messageElement);
 }
 
-var createFeed = function(posts) {
+function createFeed(posts) {
   posts.forEach(displayMessage);
 }
 
