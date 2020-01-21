@@ -11,28 +11,28 @@
     <div class="message-list">
     </div>
     <script>
-//Hello! This is the start of the JavaScript.
+// Hello! This is the start of the JavaScript.
 
 function displayMessage(post) {
 
   let postHTML = 
   '<div class="post">'
   + '<div class="message">' + post + '</div>'
-  + '</div>';
+  + '</div>'
 
-  let messageList = document.querySelector(".message-list");
-  messageList.innerHTML += postHTML;
+  let messageList = document.querySelector(".message-list")
+  messageList.innerHTML += postHTML
 }
 
 function createFeed(posts) {
-  posts.forEach(displayMessage);
+  posts.forEach(displayMessage)
 }
 
 fetch("/posts")
   .then(response => response.json())
-  .then(createFeed);
+  .then(createFeed)
 
-//This is the end of the JavaScript.
+// This is the end of the JavaScript.
     </script>
   </body>
 </html>
